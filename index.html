@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tripgo - All Service</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <main class="content111">
+      <!-- FILTER COMPONENT -->
+      <section class="filter-component111 mb-5">
+        <div class="filter-component112">
+          <!-- <div class="btn-roundfull-sec">
+            <p>All Categories</p>
+            <i class="bi bi-caret-down-fill"></i>
+          </div> -->
+          <select name="category" id="category" class="btn-roundfull-sec">
+            <option value="0">All Categories</option>
+            <option value="1">Tours</option>
+            <option value="2">Cruises</option>
+            <option value="3">Massages & Hot Springs</option>
+            <option value="3">Water Activities</option>
+            <option value="3">Outdoor & Sports Activities</option>
+            <option value="3">Cultural Experiences</option>
+          </select>
+          <!-- <a href="" class="btn-roundfull-sec">Text 1</a> -->
+          <label for="search">
+            <i class="bi bi-search"></i>
+            <input type="text" id="search" name="search" />
+          </label>
+        </div>
+        <span class="filter-component122">
+          <div class="group-comp111">
+            <p>Sort By :</p>
+            <!-- <div class="btn-square-round-outline">
+              <p>Recomended</p>
+              <i class="bi bi-caret-down-fill"></i>
+            </div> -->
+            <select name="sort" id="sort" class="btn-square-round-outline">
+              <option value="0">Recomended</option>
+              <option value="1">Best Seller</option>
+              <option value="2">Price (low to Hight)</option>
+              <option value="3">Price (Hight to Low)</option>
+            </select>
+          </div>
+          <label for="btn-filter" class="btn-square-round-outline">
+            <i class="bi bi-funnel"></i>
+            <input type="checkbox" name="open-filter" id="btn-filter" />
+            <p>Filter</p>
+            <!-- <i class="bi bi-caret-down-fill"></i> -->
+          </label>
+          <div id="component-filter" class="backcomp111">
+            <div class="maxwidth-comp">
+              <div class="dropcontent-filter">
+                <h3>FILTERS</h3>
+                <!-- PARTICIPATION DATE -->
+                <div class="sub-filter111">
+                  <h4 class="title-sub111">Participation Date(s)</h4>
+                  <div class="flex">
+                    <span class="btn-roundfull-sec">Today</span>
+                    <span class="btn-roundfull-sec">Tomorrow</span>
+                    <span class="btn-roundfull-sec">More Dates</span>
+                  </div>
+                </div>
+                <!-- END PARTICIPATION DATE -->
+                <!-- PRICE RANGE -->
+                <div class="sub-filter111">
+                  <h4 class="title-sub111">Price Range</h4>
+                  <div class="filter-price111">
+                    <input type="text" placeholder="min price" />
+                    <span></span>
+                    <input type="text" placeholder="max price" />
+                  </div>
+                  <!-- <div>
+                    <input type="range" name="" id="" />
+                  </div> -->
+                </div>
+                <!-- END PRICE RANGE -->
+                <!-- DURATION -->
+                <div class="sub-filter111">
+                  <h4 class="title-sub111">Duration</h4>
+                  <div class="flex-wrap111">
+                    <span class="btn-roundfull-sec">0-3 hours</span>
+                    <span class="btn-roundfull-sec">3-5 hours</span>
+                    <span class="btn-roundfull-sec">5-7 hours</span>
+                    <span class="btn-roundfull-sec">Full day</span>
+                    <span class="btn-roundfull-sec">2 or more day</span>
+                  </div>
+                </div>
+                <!-- END DURATION -->
+                <!-- DEPATURE TIME -->
+                <div class="sub-filter111">
+                  <h4 class="title-sub111">Depature Time</h4>
+                  <div class="flex-wrap111">
+                    <span class="btn-roundfull-sec"
+                      >Early morning (05:00-09:00)</span
+                    >
+                    <span class="btn-roundfull-sec">Morning (09:00-12:00)</span>
+                    <span class="btn-roundfull-sec"
+                      >Afternoon (12:00-16:00)</span
+                    >
+                    <span class="btn-roundfull-sec">Evening (16:00-20:00)</span>
+                    <span class="btn-roundfull-sec">Night (20:00-00:00)</span>
+                    <span class="btn-roundfull-sec"
+                      >Late night (00:00-05:00)</span
+                    >
+                  </div>
+                </div>
+                <!-- END DEPATURE TIME -->
+                <!-- SERVICE -->
+                <div class="sub-filter111">
+                  <h4 class="title-sub111">Service</h4>
+                  <div class="flex-wrap111">
+                    <span class="btn-roundfull-sec">Private group</span>
+                    <span class="btn-roundfull-sec">Hotel pick up</span>
+                    <span class="btn-roundfull-sec">Easy refund</span>
+                    <span class="btn-roundfull-sec">Guaranteed depature</span>
+                  </div>
+                </div>
+                <!-- END SERVICE -->
+                <!-- ACTION FILTER -->
+                <div class="sub-filter111">
+                  <button id="submit-filter" class="btn-prime">Submit</button>
+                </div>
+                <!-- END ACTION FILTER -->
+              </div>
+            </div>
+          </div>
+        </span>
+      </section>
+      <!-- END FILTER COMPONENT -->
+
+      <hr class="mb-2" />
+
+      <!-- MAPPING CARD -->
+      <div id="container-card" class="mapping-card mb-5">
+        <!-- CARD -->
+        <div class="cardprod">
+          <!-- IMAGE CARD -->
+          <span class="imgmap-card">
+            <img src="/assets/img/2-diamond-beach-870x555.jpg" alt="" />
+          </span>
+          <!-- DESC CARD -->
+          <span class="descmap-card">
+            <h3 class="tittle-descmapcard">
+              Bali Swing and Waterfall Full Day Tour in Ubud
+            </h3>
+            <div class="my-111111">
+              <p>Departing from Ubud</p>
+              <div class="rate-descmapcard">
+                <i class="bi bi-star-fill"></i>
+                <p>(1.722)</p>
+                <i class="bi bi-dot"></i>
+                <p>10K+ booked</p>
+              </div>
+              <div class="flex">
+                <p class="tagmap-card">Bestseller</p>
+                <p class="tagmap-card">English available</p>
+              </div>
+            </div>
+            <div class="flex">
+              <h4 class="tagprice-mapcard">Rp. 475.000</h4>
+              <p class="tagprice-discount-card">Rp. 532.000</p>
+            </div>
+            <div class="flex">
+              <h5 class="tagmap-card-prime">Best Price Guarantee</h5>
+            </div>
+          </span>
+        </div>
+      </div>
+      <!-- END MAPPING CARD -->
+
+      <!-- PAGINATION -->
+      <div class="pagination-container111">
+        <a class="btn-pagination111">
+          <i class="bi bi-caret-left-fill"></i>
+        </a>
+        <span class="btn-pagination111"> PAGE 01 </span>
+        <a class="btn-pagination111">
+          <i class="bi bi-caret-right-fill"></i>
+        </a>
+      </div>
+      <!-- END PAGINATION -->
+    </main>
+  </body>
+  <script src="/filter.js"></script>
+</html>
