@@ -11,18 +11,22 @@ btnFilter.addEventListener("click", () => {
   }
 });
 
-compFilter.addEventListener("click", () => {
+const handleClose = () => {
   btnFilter.checked = false;
   compFilter.style.display = "none";
-});
+};
+const btnClose = document.getElementById("btn-close");
+btnClose.addEventListener("click", handleClose);
+compFilter.addEventListener("click", handleClose);
+
 const containerMenu = document.querySelector(".dropcontent-filter");
 containerMenu.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
 btnSubmitFilter.addEventListener("click", () => {
-  btnFilter.checked = false;
-  compFilter.style.display = "none";
+  console.log("SUBMIT");
+  handleClose();
 });
 
 // MAPPING CARD

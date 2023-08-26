@@ -24,9 +24,18 @@ body {
   justify-content: center;
   padding: 24px 0;
 }
+button {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
 select {
   border: none;
+  outline: none;
+  background-color: transparent;
   /* appearance: none; */
 }
 
@@ -75,10 +84,6 @@ select {
   padding: 0 24px;
   font-weight: 700;
   background-color: var(--color-primary);
-  box-shadow: none;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
 }
 .btn-prime:hover {
   scale: 1.05;
@@ -132,12 +137,12 @@ label:has(.bi-search) input {
 .filter-component112 {
   display: flex;
   margin-right: auto;
-  gap: 40px;
+  gap: 32px;
 }
 
 .filter-component122 {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   border-left: solid 1px var(--color-slate-80);
   padding: 0 0 0 20px;
 }
@@ -293,6 +298,39 @@ label:has(.bi-search) input {
   right: 0;
   z-index: 2; */
   box-shadow: -1px 1px 20px var(--color-slate-80);
+}
+.head-modal111 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.head-modal111 h3 {
+  font-size: 20px;
+  color: var(--color-primary);
+  text-shadow: 1px 1px 3px black;
+}
+.head-modal111 .bi-x-circle {
+  margin-top: 2px;
+  font-size: 30px;
+}
+.head-modal111 button {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 1px black; */
+  border-radius: 50%;
+  margin-top: -6px;
+  /* position: absolute;
+  top: -58px;
+  right: -58px;
+  z-index: 5; */
+}
+.head-modal111 button:hover {
+  rotate: 90deg;
+  color: var(--color-primary);
 }
 .sub-filter111 {
   border-top: solid 1px var(--color-slate-80);
