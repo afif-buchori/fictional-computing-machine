@@ -15,6 +15,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <!-- TEST -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- TEST -->
   </head>
   <body>
     <main class="content111">
@@ -157,54 +163,58 @@
 
       <hr class="mb-2" />
 
-      <!-- POPULAR COMPONENT -->
+      <!-- POPULAR SLIDER -->
       <section>
-        <button id="btn-slide-prev" class="btn-slider111">
-          <i class="bi bi-caret-left-fill"></i>
-        </button>
-        <button id="btn-slide-next" class="btn-slider111">
-          <i class="bi bi-caret-right-fill"></i>
-        </button>
-        <div class="popular-content111 no-scrollbar mb-2">
-          <h2>Popular</h2>
-          <span id="container-popularcard" class="container-popularcard111">
-            <!-- CARD -->
-            <div class="cardprod">
-              <!-- IMAGE CARD -->
-              <span class="imgmap-card">
-                <img src="/assets/img/2-diamond-beach-870x555.jpg" alt="" />
-              </span>
-              <!-- DESC CARD -->
-              <span class="descmap-card">
-                <h3 class="tittle-descmapcard">
-                  Bali Swing and Waterfall Full Day Tour in Ubud
-                </h3>
-                <div class="my-111111">
-                  <p>Departing from Ubud</p>
-                  <div class="rate-descmapcard">
-                    <i class="bi bi-star-fill"></i>
-                    <p>(1.722)</p>
-                    <i class="bi bi-dot"></i>
-                    <p>10K+ booked</p>
+        <h2 class="h2-popular111 mb-2">Popular</h2>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <!-- CARD -->
+              <div class="cardprod">
+                <!-- IMAGE CARD -->
+                <span class="imgmap-card">
+                  <img src="/assets/img/2-diamond-beach-870x555.jpg" alt="" />
+                </span>
+                <!-- DESC CARD -->
+                <span class="descmap-card">
+                  <h3 class="tittle-descmapcard">
+                    Bali Swing and Waterfall Full Day Tour in Ubud
+                  </h3>
+                  <div class="my-111111">
+                    <p>Departing from Ubud</p>
+                    <div class="rate-descmapcard">
+                      <i class="bi bi-star-fill"></i>
+                      <p>(1.722)</p>
+                      <i class="bi bi-dot"></i>
+                      <p>10K+ booked</p>
+                    </div>
+                    <div class="flex">
+                      <p class="tagmap-card">Bestseller</p>
+                      <p class="tagmap-card">English available</p>
+                    </div>
                   </div>
                   <div class="flex">
-                    <p class="tagmap-card">Bestseller</p>
-                    <p class="tagmap-card">English available</p>
+                    <h4 class="tagprice-mapcard">Rp. 475.000</h4>
+                    <p class="tagprice-discount-card">Rp. 532.000</p>
                   </div>
-                </div>
-                <div class="flex">
-                  <h4 class="tagprice-mapcard">Rp. 475.000</h4>
-                  <p class="tagprice-discount-card">Rp. 532.000</p>
-                </div>
-                <div class="flex">
-                  <h5 class="tagmap-card-prime">Best Price Guarantee</h5>
-                </div>
-              </span>
+                  <div class="flex">
+                    <h5 class="tagmap-card-prime">Best Price Guarantee</h5>
+                  </div>
+                </span>
+              </div>
             </div>
-          </span>
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <!-- If we need navigation buttons -->
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </section>
-      <!-- END POPULAR COMPONENT -->
+      <!-- END POPULAR SLIDER -->
 
       <hr class="mb-2" />
 
@@ -260,4 +270,56 @@
     </main>
   </body>
   <script src="/filter.js"></script>
+
+  <!-- TEST -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
+
+    const swiper = new Swiper(".swiper", {
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      // loop: true,
+      speed: 400,
+      spaceBetween: 20,
+      breakpoints: {
+        200: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        440: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    const swipers = document.querySelector(".swiper").swiper;
+
+    // Now you can use all slider methods like
+    swipers.slideNext();
+  </script>
+  <!-- TEST -->
 </html>

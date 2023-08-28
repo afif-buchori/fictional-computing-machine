@@ -40,31 +40,10 @@ for (let i = 0; i < totalCard; i++) {
 }
 // END MAPPING CARD
 
+const sliderWrappers = document.querySelector(".swiper-wrapper");
+const cardPopular = document.querySelector(".swiper-slide");
 const containerPopularCard = document.getElementById("container-popularcard");
 for (let x = 0; x < totalCard / 2; x++) {
-  cardProduct.style.width = "240px";
-  let cloneCard = cardProduct.cloneNode(true);
-  containerPopularCard.appendChild(cloneCard);
+  let cloneCardPopular = cardPopular.cloneNode(true);
+  sliderWrappers.append(cloneCardPopular);
 }
-
-const btnPrev = document.getElementById("btn-slide-prev");
-const btnNext = document.getElementById("btn-slide-next");
-const scrollable = document.getElementById("container-popularcard");
-let valScroll = 0;
-// const checkBtnSlide = () => {
-//   if (valScroll === 0) {
-//     btnPrev.style.display = "none";
-//   }
-// };
-// checkBtnSlide();
-btnNext.addEventListener("click", () => {
-  valScroll -= 260;
-  scrollable.style.transform = `translateX(${valScroll}px)`;
-  // checkBtnSlide();
-});
-btnPrev.addEventListener("click", () => {
-  // if (valScroll < 1) return;
-  valScroll += 260;
-  scrollable.style.transform = `translateX(${valScroll}px)`;
-  // checkBtnSlide();
-});
