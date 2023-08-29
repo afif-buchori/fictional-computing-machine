@@ -59,3 +59,20 @@ const handleCalc = () => {
   totalPrice = price * valAdult + price * (valChild / 2);
   elemenPrice.innerHTML = "Rp.  " + totalPrice.toLocaleString("id-ID");
 };
+
+const btnSeeDetails = document.getElementById("btn-see-details");
+const btnClose = document.getElementById("btn-close");
+const componentModal = document.querySelector(".comp-bg111");
+const contentModal = document.querySelector(".content-modal1111");
+btnSeeDetails.addEventListener("click", () => {
+  componentModal.style.display = "grid";
+});
+contentModal.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+componentModal.addEventListener("click", () => {
+  componentModal.style.display = "none";
+});
+btnClose.addEventListener("click", () => {
+  componentModal.style.display = "none";
+});

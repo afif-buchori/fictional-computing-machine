@@ -365,7 +365,7 @@ label:has(.bi-search) input {
   color: var(--color-primary);
   text-shadow: 1px 1px 3px black;
 }
-.head-modal111 .bi-x-circle {
+.bi-x-circle {
   margin-top: 2px;
   font-size: 30px;
 }
@@ -383,7 +383,7 @@ label:has(.bi-search) input {
   right: -58px;
   z-index: 5; */
 }
-.head-modal111 button:hover {
+#btn-close:hover {
   rotate: 90deg;
   color: var(--color-primary);
 }
@@ -897,6 +897,65 @@ section .swiper-button-next:hover::after {
 }
 
 /* END FORM SELECTED */
+
+/* MODAL DETAILS */
+.comp-bg111 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* display: grid; */
+  display: none;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.content-modal1111 {
+  width: 50%;
+  height: 80vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.title-modal-comp111 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.title-modal-comp111 #btn-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+.title-modal-comp111 #btn-close:hover {
+  /* margin-top: -1px; */
+  top: -9px;
+}
+.content-modal1111 h1 {
+  font-size: 20px;
+}
+.main-modal111 {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.subcontent-details111 {
+  margin: 10px 0 16px 16px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--color-slate-80);
+}
+.subcontent-details111:last-child {
+  border: none;
+}
+.subcontent-details111 h3 {
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
 /* END DETAILS PAGE */
 
 .btn-prime:active,
