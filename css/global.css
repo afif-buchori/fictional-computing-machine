@@ -129,9 +129,23 @@ select {
   text-decoration: none;
   color: black;
 }
-.btn-prime:hover {
+.btn-prime:hover,
+.btn-outline-prime:hover {
   scale: 1.05;
   /* border-radius: 20px; */
+}
+.btn-outline-prime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: solid 2px var(--color-primary);
+  background-color: white;
+  text-decoration: none;
+  color: var(--color-primary);
 }
 .btn-roundfull-sec {
   display: flex;
@@ -570,7 +584,7 @@ section .swiper-button-next:hover::after {
   padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  /* gap: 14px; */
   background-color: white;
   border: solid 1px var(--color-slate-80);
   border-radius: 20px;
@@ -578,6 +592,13 @@ section .swiper-button-next:hover::after {
   position: sticky;
   top: 10px;
   right: 0;
+}
+
+.side-content-price111 .flex {
+  margin-bottom: 14px;
+}
+.side-content-price111 p {
+  font-weight: 500;
 }
 .side-content-price111 h3 {
   font-size: 20px;
@@ -694,7 +715,8 @@ section .swiper-button-next:hover::after {
   width: 100%;
   /* display: flex; */
   display: none;
-  gap: 4px;
+  gap: 20px;
+  padding: 20px;
   border-top: solid 1px var(--color-slate-80);
 }
 .date-comp1111 {
@@ -702,29 +724,140 @@ section .swiper-button-next:hover::after {
 }
 #caledar,
 #calendar * {
-  transition: none;
+  /* transition: none; */
 }
 #calendar {
   /* width: 100%; */
-  padding: 12px 16px;
-  flex: 0.5;
+  /* padding: 12px 16px; */
+  flex: 0.7;
   height: 464px;
+}
+#calendar .fc-header-toolbar {
+  border: solid 1px var(--color-slate);
+  padding: 14px 20px 16px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin: 0;
+}
+#calendar table {
+  border: solid 1px var(--color-slate);
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
 }
 #calendar .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
   /* min-height: 10px; */
   display: none;
 }
+#calendar .fc-daygrid-day-events {
+  /* display: none; */
+  min-height: 1px;
+}
+.fc .fc-daygrid-day-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#calendar .fc-daygrid-day-top .fc-daygrid-day-number {
+  font-size: 16px;
+  font-weight: 700;
+}
+.fc .fc-button-primary {
+  background-color: var(--color-primary-50);
+  color: black;
+}
+.fc .fc-highlight {
+  background-color: var(--color-primary-50);
+}
+
+/* FORM INPUT */
+.label-form1111 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.label-form1111 input[type="date"] {
+  padding: 8px 20px;
+  background-color: var(--color-slate-80);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+.input-qty111 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 12px;
+  background-color: var(--color-slate-80);
+  border-radius: 20px;
+}
+.input-qty111 p {
+  font-style: italic;
+  color: var(--color-accent);
+  margin-right: auto;
+}
+.input-qty111 input {
+  width: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.input-qty111 i {
+  margin-top: 2px;
+  font-size: 20px;
+}
+.btn-qty111 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: solid 2px black;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-primary-50);
+}
+.btn-qty111:active {
+  scale: 0.9;
+  transition-duration: 100ms;
+}
 
 .form-guest111 {
-  flex: 0.5;
+  flex: 0.3;
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
+.btnaction-container111 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: auto;
+}
+.btnaction-container111 .flex {
+  justify-content: center;
+}
+.total-price111 {
+  font-size: 20px;
+}
+.btnaction-container111 button {
+  flex: 1;
+}
+
+/* FORM ACTION COMPONENT */
+.form-actioncomp111 {
+  margin-left: auto;
+}
+
 /* END FORM SELECTED */
 /* END DETAILS PAGE */
 
 .btn-prime:active,
+.btn-outline-prime:active,
 #btn-close:active,
 .btn-slider111:active {
   scale: 0.8;
