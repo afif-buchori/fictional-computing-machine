@@ -836,7 +836,8 @@ section .swiper-button-next:hover::after {
   flex-direction: column;
   gap: 2px;
 }
-.label-form1111 #datepicker {
+.label-form1111 #datepicker,
+.flatpickr-mobile {
   padding: 8px 20px;
   background-color: var(--color-slate-80);
   border-radius: 20px;
@@ -1014,4 +1015,120 @@ section .swiper-button-next:hover::after {
   grid-template-columns: repeat(7, 1fr);
   gap: 5px;
   /* Other styles */
+}
+
+@media (max-width: 768px) {
+  .btn-pagination111 {
+    height: 30px;
+    padding: 0 8px;
+  }
+  .content111 {
+    padding: 0 12px;
+  }
+  .filter-component112 {
+    gap: 8px;
+  }
+  .filter-component112 .btn-roundfull-sec,
+  label:has(.bi-search) {
+    width: 100%;
+  }
+  .filter-component122 {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+  label:has(.bi-funnel) {
+    margin-left: auto;
+  }
+  label:has(.bi-funnel) p {
+    display: none;
+  }
+
+  section .swiper-button-prev {
+    top: auto;
+    bottom: 12px;
+    left: 0;
+  }
+  section .swiper-button-next {
+    top: auto;
+    bottom: 12px;
+    right: 0;
+  }
+  .mapping-card {
+    gap: 1%;
+    row-gap: 8px;
+  }
+  .cardprod {
+    width: 49%;
+    min-height: fit-content;
+  }
+  .descmap-card {
+    padding: 8px;
+  }
+  .descmap-card * {
+    font-size: 12px;
+  }
+  .descmap-card .flex p {
+    font-size: 8px;
+  }
+
+  .other-search111 input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .content-details111 .flex {
+    flex-wrap: wrap;
+  }
+
+  .details-comp111 {
+    flex-direction: column-reverse;
+  }
+  .side-content111,
+  .details-content111 {
+    width: 100%;
+  }
+  .details-content111 * {
+    font-size: 14px;
+  }
+  .card-packages111 > .flex {
+    flex-direction: column;
+  }
+  .card-content111 p {
+    font-size: 12px;
+  }
+  .card-side111 {
+    width: 100%;
+    padding: 14px;
+  }
+  .card-side111 > .flex {
+    justify-content: end;
+  }
+
+  /*  */
+  .form-component111,
+  .form-input-booking1111 {
+    flex-direction: column;
+  }
+  .form-input-booking1111 .flex {
+    flex-wrap: wrap;
+  }
+  .form-input-booking1111 .input-qty111 {
+    width: 100%;
+  }
+  .form-actioncomp111 {
+    margin: 0;
+  }
+  .form-actioncomp111 .flex {
+    width: 100%;
+  }
+}
+
+.long-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /* Menampilkan hanya 2 baris */
+  line-height: 1.5; /* Tinggi baris untuk mengatur spasi antara baris */
+  max-height: 3em; /* Tinggi maksimal untuk 2 baris */
 }
