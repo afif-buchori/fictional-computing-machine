@@ -1072,12 +1072,16 @@ section .swiper-button-next:hover::after {
   .descmap-card .flex p {
     font-size: 8px;
   }
-  .dropcontent-filter {
-    width: 80%;
+  .dropcontent-filter,
+  .content-modal1111 {
+    width: 88%;
     padding: 12px;
   }
   .dropcontent-filter * {
     font-size: 12px;
+  }
+  .dropcontent-filter .bi-x-circle {
+    font-size: 30px;
   }
   .dropcontent-filter .btn-roundfull-sec {
     height: auto;
@@ -1090,8 +1094,31 @@ section .swiper-button-next:hover::after {
     width: 100%;
     margin-bottom: 10px;
   }
-  .content-details111 .flex {
+  .content-details111 .flex,
+  .title-modal-comp111 .flex {
     flex-wrap: wrap;
+  }
+
+  .jumbotron-container111 {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .jumbotron-container111 .jumbotron111 {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 200px;
+  }
+  .jumbotron-container111 .jumbotron121 {
+    width: 100%;
+    flex-direction: row;
+    height: 80px;
+    gap: 2px;
+  }
+  .jumbotron-container111 .jumbotron121 span {
+    height: 100%;
+  }
+  .jumbotron-container111 .jumbotron121 span:first-child {
+    border-radius: 0 0 0 20px;
   }
 
   .details-comp111 {
@@ -1107,7 +1134,8 @@ section .swiper-button-next:hover::after {
   .card-packages111 > .flex {
     flex-direction: column;
   }
-  .card-content111 p {
+  .card-content111 p,
+  .subcontent-details111 * {
     font-size: 12px;
   }
   .card-side111 {
