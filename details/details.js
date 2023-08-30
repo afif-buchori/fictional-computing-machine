@@ -69,6 +69,15 @@ btnDescChild.addEventListener("click", () => {
   handleCalc();
 });
 
+inputAdult.addEventListener("input", (e) => {
+  if (isNaN(e.target.value)) inputAdult.value = 1;
+  handleCalc();
+});
+inputChild.addEventListener("input", () => {
+  if (isNaN(e.target.value)) inputAdult.value = 0;
+  handleCalc();
+});
+
 let price = 1499512;
 const elemenPrice = document.querySelector(".total-price111");
 elemenPrice.innerHTML = "Rp.  " + price.toLocaleString("id-ID");
