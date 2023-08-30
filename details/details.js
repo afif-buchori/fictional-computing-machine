@@ -1,3 +1,12 @@
+// AUTO SCROLL TO PACKAGE OPTIONS =============>>>>>>>>>>
+const btnSelectOpt = document.getElementById("btn-select-options");
+const compPackage = document.getElementById("package");
+btnSelectOpt.addEventListener("click", () => {
+  compPackage.scrollIntoView({ behavior: "smooth" });
+});
+// END AUTO SCROLL TO PACKAGE OPTIONS
+
+// MAPPING PACKAGE OPTIONS =============>>>>>>>>>>
 const containerPackage = document.getElementById("container-package");
 const cardPackage = document.getElementById("card-package");
 const totalCard = 5;
@@ -6,7 +15,9 @@ for (let i = 0; i < totalCard; i++) {
   let clonedCard = cardPackage.cloneNode(true);
   containerPackage.appendChild(clonedCard);
 }
+// END MAPPING PACKAGE OPTIONS
 
+// SELECT PACKAGE =============>>>>>>>>>>
 const compSelect = document.querySelector(".card-side111");
 const formPackage = document.getElementById("form-package");
 const btnSelect = document.getElementById("btn-select-package");
@@ -20,7 +31,9 @@ btnCancel.addEventListener("click", () => {
   compSelect.style.display = "flex";
   formPackage.style.display = "none";
 });
+// END SELECT PACKAGE
 
+// HANDLE QTY GUEST =============>>>>>>>>>>
 const btnDescAdult = document.getElementById("btn-desc-adult");
 const btnAscAdult = document.getElementById("btn-asc-adult");
 const inputAdult = document.getElementById("adult");
@@ -59,7 +72,9 @@ const handleCalc = () => {
   totalPrice = price * valAdult + price * (valChild / 2);
   elemenPrice.innerHTML = "Rp.  " + totalPrice.toLocaleString("id-ID");
 };
+// END HANDLE QTY GUEST
 
+// MODAL DETAILS =============>>>>>>>>>>
 const btnSeeDetails = document.getElementById("btn-see-details");
 const btnClose = document.getElementById("btn-close");
 const componentModal = document.querySelector(".comp-bg111");
@@ -76,3 +91,4 @@ componentModal.addEventListener("click", () => {
 btnClose.addEventListener("click", () => {
   componentModal.style.display = "none";
 });
+// END MODAL DETAILS

@@ -15,6 +15,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <!-- THEME DATEPICKR -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://npmcdn.com/flatpickr/dist/themes/confetti.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- END THEME DATEPICKR -->
   </head>
   <body>
     <main class="content111">
@@ -142,7 +154,9 @@
               <h3>Rp. 1.559.638</h3>
               <p class="discount1111">Rp. 1.630.124</p>
             </div>
-            <a href="#package" class="btn-prime">Select options</a>
+            <button id="btn-select-options" class="btn-prime">
+              Select options
+            </button>
           </div>
         </span>
         <!-- END SIDE COMPONENT -->
@@ -182,7 +196,7 @@
               </span>
             </div>
             <!-- SHOW FORM -->
-            <div id="form-package" class="form-component111">
+            <!-- <div id="form-package" class="form-component111">
               <div id="calendar"></div>
               <span class="form-guest111">
                 <h2>Select Date and Options</h2>
@@ -219,50 +233,71 @@
                   </div>
                 </div>
               </span>
-            </div>
+            </div> -->
             <!-- END SHOW FORM -->
             <!-- 2 -->
-            <!-- <div id="form-package" class="form-component111">
-              <label for="date" class="label-form1111">
-                Select Date:
-                <input type="date" name="date" id="date" />
-              </label>
-              <label for="guest" class="label-form1111">
-                <p>Guest:</p>
-                <div class="flex">
-                  <div class="input-qty111">
-                    <p>Adult:</p>
-                    <button id="btn-desc-adult" class="btn-qty111">
-                      <i class="bi bi-dash"></i>
-                    </button>
-                    <input type="numeric" name="adult" id="adult" value="1" />
-                    <button id="btn-asc-adult" class="btn-qty111">
-                      <i class="bi bi-plus"></i>
-                    </button>
-                  </div>
-                  <div class="input-qty111">
-                    <p>Child:</p>
-                    <button id="btn-desc-child" class="btn-qty111">
-                      <i class="bi bi-dash"></i>
-                    </button>
-                    <input type="numeric" name="child" id="child" value="0" />
-                    <button id="btn-asc-child" class="btn-qty111">
-                      <i class="bi bi-plus"></i>
-                    </button>
-                  </div>
+            <div id="form-package" class="form-component111">
+              <span class="form-input-group111">
+                <h2 class="h2-popular111 mb-5">Select Date & Options</h2>
+                <div class="form-input-booking1111">
+                  <label for="date" class="label-form1111">
+                    Select Date:
+                    <input
+                      type="text"
+                      id="datepicker"
+                      placeholder="Select a date"
+                    />
+                  </label>
+                  <label for="guest" class="label-form1111">
+                    <p>Guest:</p>
+                    <div class="flex">
+                      <div class="input-qty111">
+                        <p>Adult:</p>
+                        <button id="btn-desc-adult" class="btn-qty111">
+                          <i class="bi bi-dash"></i>
+                        </button>
+                        <input
+                          type="numeric"
+                          name="adult"
+                          id="adult"
+                          value="1"
+                        />
+                        <button id="btn-asc-adult" class="btn-qty111">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                      <div class="input-qty111">
+                        <p>Child:</p>
+                        <button id="btn-desc-child" class="btn-qty111">
+                          <i class="bi bi-dash"></i>
+                        </button>
+                        <input
+                          type="numeric"
+                          name="child"
+                          id="child"
+                          value="0"
+                        />
+                        <button id="btn-asc-child" class="btn-qty111">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </label>
                 </div>
-              </label>
+              </span>
               <span class="form-actioncomp111">
                 <div class="flex">
-                  <h5>Rp. 1.709.512</h5>
+                  <h5 class="total-price111">Rp. 1.709.512</h5>
                   <p class="discount1111">Rp. 1.820.678</p>
                 </div>
                 <div class="flex">
-                  <button id="cancle-book" class="btn-prime">Cancel</button>
+                  <button id="cancle-book" class="btn-outline-prime">
+                    Cancel
+                  </button>
                   <button id="submit-book" class="btn-prime">Book Now</button>
                 </div>
               </span>
-            </div> -->
+            </div>
             <!-- 2 -->
 
             <!-- CALENDAR -->
@@ -288,6 +323,25 @@
                   </button>
                 </div>
                 <div class="main-modal111">
+                  <!--  -->
+                  <div class="calendar">
+                    <input
+                      type="text"
+                      id="datePicker"
+                      placeholder="Select a date"
+                    />
+                    <div id="calendarContainer" class="calendar-container">
+                      <div class="calendar-header">
+                        <span class="prev-month">&lt;</span>
+                        <span class="current-month">August 2023</span>
+                        <span class="next-month">&gt;</span>
+                      </div>
+                      <div class="calendar-grid">
+                        <!-- Calendar days will be generated here -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
                   <h2 class="h2-popular111">About this package</h2>
                   <div class="subcontent-details111">
                     <h3>What's included</h3>
@@ -406,6 +460,16 @@
   </body>
 
   <script src="./details.js"></script>
+  <script>
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    flatpickr("#datepicker", {
+      // minDate: "today",
+      minDate: tomorrow,
+      dateFormat: "d-m-Y", // Format tanggal yang diinginkan
+      // Opsi lainnya
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {

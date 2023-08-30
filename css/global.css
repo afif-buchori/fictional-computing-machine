@@ -816,12 +816,27 @@ section .swiper-button-next:hover::after {
 }
 
 /* FORM INPUT */
+.form-input-group111 {
+  display: flex;
+  flex-direction: column;
+}
+.form-input-group111 .h2-popular111 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.form-input-group111 .h2-popular111::before {
+  height: 24px;
+}
+.form-input-booking1111 {
+  display: flex;
+  gap: 20px;
+}
 .label-form1111 {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-.label-form1111 input[type="date"] {
+.label-form1111 #datepicker {
   padding: 8px 20px;
   background-color: var(--color-slate-80);
   border-radius: 20px;
@@ -894,6 +909,13 @@ section .swiper-button-next:hover::after {
 /* FORM ACTION COMPONENT */
 .form-actioncomp111 {
   margin-left: auto;
+  margin-top: auto;
+}
+.form-actioncomp111 .flex {
+  min-width: 260px;
+}
+.form-actioncomp111 .flex button {
+  flex: 1;
 }
 
 /* END FORM SELECTED */
@@ -964,4 +986,30 @@ section .swiper-button-next:hover::after {
 .btn-slider111:active {
   scale: 0.8;
   transition-duration: 100ms;
+}
+
+.calendar-container {
+  display: none;
+  /* Other styles */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.prev-month,
+.next-month {
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  /* Other styles */
 }
