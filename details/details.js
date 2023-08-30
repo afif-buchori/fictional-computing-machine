@@ -1,3 +1,10 @@
+const btnWishlist = document.getElementById("btn-wishlist");
+const iconFav = document.querySelector("#btn-wishlist .bi");
+let isFav = false;
+btnWishlist.addEventListener("click", () => {
+  iconFav.classList.remove("bi-heart");
+  iconFav.classList.add("bi-heart-fill");
+});
 // AUTO SCROLL TO PACKAGE OPTIONS =============>>>>>>>>>>
 const btnSelectOpt = document.getElementById("btn-select-options");
 const compPackage = document.getElementById("package");

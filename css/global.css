@@ -565,7 +565,7 @@ section .swiper-button-next:hover::after {
 .content-details111 .bi-star-fill {
   font-size: 18px;
 }
-.content-details111 .flex:has(.bi-heart) .flex:last-child {
+.content-details111 #btn-wishlist {
   margin-left: auto;
   font-weight: 500;
 }
@@ -913,6 +913,8 @@ section .swiper-button-next:hover::after {
 }
 .form-actioncomp111 .flex {
   min-width: 260px;
+  margin-top: 10px;
+  justify-content: end;
 }
 .form-actioncomp111 .flex button {
   flex: 1;

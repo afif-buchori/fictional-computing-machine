@@ -63,10 +63,10 @@
             <i class="bi bi-geo-alt"></i>
             <p>Departing from Ubud</p>
           </div>
-          <div class="flex">
+          <button id="btn-wishlist" class="flex">
             <i class="bi bi-heart"></i>
             <p>Wishlist</p>
-          </div>
+          </button>
         </div>
       </div>
       <!-- END TITLE DETAILS PAGE -->
@@ -240,7 +240,7 @@
               <span class="form-input-group111">
                 <h2 class="h2-popular111 mb-5">Select Date & Options</h2>
                 <div class="form-input-booking1111">
-                  <label for="date" class="label-form1111">
+                  <label for="datepicker" class="label-form1111">
                     Select Date:
                     <input
                       type="text"
@@ -300,15 +300,7 @@
             </div>
             <!-- 2 -->
 
-            <!-- CALENDAR -->
-            <!-- <div class="cal-bg111">
-              <span class="calcomp111">
-                <div id="calendar"></div>
-              </span>
-            </div> -->
-            <!-- CALENDAR -->
-
-            <!-- INFO DETAILS -->
+            <!-- MODAL DETAILS -->
             <div class="comp-bg111">
               <span class="content-modal1111">
                 <div class="title-modal-comp111">
@@ -323,25 +315,6 @@
                   </button>
                 </div>
                 <div class="main-modal111">
-                  <!--  -->
-                  <div class="calendar">
-                    <input
-                      type="text"
-                      id="datePicker"
-                      placeholder="Select a date"
-                    />
-                    <div id="calendarContainer" class="calendar-container">
-                      <div class="calendar-header">
-                        <span class="prev-month">&lt;</span>
-                        <span class="current-month">August 2023</span>
-                        <span class="next-month">&gt;</span>
-                      </div>
-                      <div class="calendar-grid">
-                        <!-- Calendar days will be generated here -->
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
                   <h2 class="h2-popular111">About this package</h2>
                   <div class="subcontent-details111">
                     <h3>What's included</h3>
@@ -451,7 +424,7 @@
                 </div>
               </span>
             </div>
-            <!-- END INFO DETAILS -->
+            <!-- END MODAL DETAILS -->
           </div>
         </div>
       </section>
@@ -472,25 +445,28 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var calendarEl = document.getElementById("calendar");
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        aspectRatio: 2.2,
-        validRange: {
-          start: new Date().toISOString().split("T")[0], // Batas tanggal mulai hari ini
-          end: "2100-12-31", // Batas tanggal akhir di masa depan
-        },
-        selectable: true, // Aktifkan seleksi tanggal
-        // Opsi lainnya...
-        select: function (info) {
-          // Fungsi yang dijalankan saat tanggal dipilih
-          var startDate = info.startStr;
-          var endDate = info.endStr;
-          console.log(info.startStr);
-          // console.log("Selected date range:", startDate, "to", endDate);
-        },
+    const isUsed = false;
+    if (isUsed) {
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          aspectRatio: 2.2,
+          validRange: {
+            start: new Date().toISOString().split("T")[0], // Batas tanggal mulai hari ini
+            end: "2100-12-31", // Batas tanggal akhir di masa depan
+          },
+          selectable: true, // Aktifkan seleksi tanggal
+          // Opsi lainnya...
+          select: function (info) {
+            // Fungsi yang dijalankan saat tanggal dipilih
+            var startDate = info.startStr;
+            var endDate = info.endStr;
+            console.log(info.startStr);
+            // console.log("Selected date range:", startDate, "to", endDate);
+          },
+        });
+        calendar.render();
       });
-      calendar.render();
-    });
+    }
   </script>
 </html>
