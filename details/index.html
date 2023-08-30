@@ -246,6 +246,7 @@
                       type="text"
                       id="datepicker"
                       placeholder="Select a date"
+                      readonly
                     />
                   </label>
                   <label for="guest" class="label-form1111">
@@ -438,6 +439,7 @@
     tomorrow.setDate(tomorrow.getDate() + 1);
     flatpickr("#datepicker", {
       // minDate: "today",
+      disableMobile: "true",
       minDate: tomorrow,
       dateFormat: "d-m-Y", // Format tanggal yang diinginkan
       // Opsi lainnya
