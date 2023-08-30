@@ -344,7 +344,6 @@ label:has(.bi-search) input {
   border-radius: 20px;
   width: 50%;
   max-height: 80vh;
-  overflow-y: auto;
   /* max-width: 80%; */
   /* min-width: 500px;
   min-height: 300px; */
@@ -353,6 +352,13 @@ label:has(.bi-search) input {
   right: 0; */
   /* z-index: 20; */
   box-shadow: -1px 1px 20px var(--color-slate-80);
+}
+.content-onscroll111 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 .head-modal111 {
   display: flex;
@@ -936,7 +942,7 @@ section .swiper-button-next:hover::after {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .content-modal1111 {
-  width: 50%;
+  width: 66%;
   height: 80vh;
   background-color: white;
   padding: 20px;
@@ -1076,6 +1082,7 @@ section .swiper-button-next:hover::after {
   .content-modal1111 {
     width: 88%;
     padding: 12px;
+    margin-bottom: 40px;
   }
   .dropcontent-filter * {
     font-size: 12px;
