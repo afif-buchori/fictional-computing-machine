@@ -401,7 +401,7 @@ label:has(.bi-search) input {
 .sub-filter111:first-child {
   margin-top: 10px 0;
 }
-.sub-filter111:last-child {
+.submit-filter111 {
   display: flex;
   justify-content: end;
   margin-bottom: 0;
@@ -497,7 +497,7 @@ section .swiper-button-next:hover {
 }
 section .swiper-button-prev:active,
 section .swiper-button-next:active {
-  scale: 0.8;
+  scale: 0.9;
   transition-duration: 100ms;
 }
 section .swiper-button-prev::after,
@@ -641,6 +641,7 @@ section .swiper-button-next:hover::after {
   position: sticky;
   top: 10px;
   right: 0;
+  z-index: 1;
 }
 
 .side-content-price111 .flex {
@@ -940,6 +941,7 @@ section .swiper-button-next:hover::after {
   display: none;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
 }
 .content-modal1111 {
   width: 66%;
@@ -993,7 +995,7 @@ section .swiper-button-next:hover::after {
 .btn-outline-prime:active,
 #btn-close:active,
 .btn-slider111:active {
-  scale: 0.8;
+  scale: 1;
   transition-duration: 100ms;
 }
 
@@ -1022,6 +1024,143 @@ section .swiper-button-next:hover::after {
   gap: 5px;
   /* Other styles */
 }
+
+/* OTHER DESCRIPTIONS */
+.other-desc-2222 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  margin: 60px 0 0;
+}
+.main-sidecomp-2211 {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  /* border: solid 2px black; */
+}
+.main-sidecomp-2211 * {
+  font-size: 16px;
+}
+.title-otherdesc111 {
+  font-size: 20px;
+}
+.main-sidecomp-2211 .h2-popular111 {
+  padding-top: 16px;
+  margin-bottom: 14px;
+}
+.main-sidecomp-2211 hr {
+  margin: 20px 0;
+}
+.main-sidecomp-2211 li {
+  margin-bottom: 10px;
+}
+.main-sidecomp-2211 li:first-child {
+  margin-top: 6px;
+}
+.main-sidecomp-2211 li:last-child {
+  margin-bottom: 20px;
+}
+
+/* REVIEW */
+#review-asd1 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+.review-comp1111 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card-review1111 {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 14px;
+  border: solid 1px var(--color-slate-80);
+  border-radius: 14px;
+  box-shadow: 1px 1px 8px var(--color-slate-80);
+}
+.card-review1111 .images789 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  /* border: solid 2px black; */
+  border-radius: 50%;
+  overflow: hidden;
+}
+.images789 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.reviewdesc111 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.reviewdesc111 .date-review7899 {
+  font-style: italic;
+  color: var(--color-accent);
+  margin-left: auto;
+  font-size: 14px;
+}
+.reviewdesc111 h5 {
+  margin: 2px 0;
+}
+.reviewdesc111 .desc7899 {
+  font-size: 12px;
+}
+
+.side-comp-2222 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid 2px black; */
+  position: relative;
+}
+.menu-side111 {
+  width: 90%;
+  display: flex;
+  border: solid 1px var(--color-slate-50);
+  border-radius: 16px;
+  padding: 14px 0;
+  margin-top: 14px;
+  position: sticky;
+  top: 136px;
+  left: 0;
+  background-color: var(--color-slate-50);
+  z-index: 0;
+}
+.pointer-menu111 {
+  display: flex;
+  height: 100%;
+}
+.pointer-menu111 span {
+  background-color: var(--color-primary);
+  margin-top: 0px;
+  width: 14px;
+  height: 30px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.menu-list1111 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.btn-menu1111 {
+  height: 30px;
+  /* border: solid 1px black; */
+  text-align: left;
+  font-weight: 600;
+}
+
+/* END OTHER DESCRIPTIONS */
 
 @media (max-width: 768px) {
   .btn-pagination111 {
@@ -1176,6 +1315,50 @@ section .swiper-button-next:hover::after {
   }
   .form-actioncomp111 .flex {
     width: 100%;
+  }
+
+  /* OTHER */
+  .other-desc-2222 {
+    flex-direction: column;
+  }
+  .side-comp-2222 {
+    width: 100%;
+  }
+  .menu-side111 {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .main-sidecomp-2211 {
+    width: 100%;
+  }
+  .main-sidecomp-2211 * {
+    font-size: 14px;
+  }
+  .title-otherdesc111 {
+    font-size: 20px;
+  }
+  /* CARD */
+  .card-review1111 {
+    gap: 10px;
+    padding: 10px;
+  }
+  .card-review1111 .images789 {
+    width: 60px;
+    height: 60px;
+  }
+  .reviewdesc111 .flex {
+    gap: 0;
+  }
+  .reviewdesc111 .flex .bi,
+  .reviewdesc111 .date-review7899 {
+    font-size: 12px;
+  }
+  .reviewdesc111 h5 {
+    font-size: 14px;
+  }
+  .reviewdesc111 .desc7899 {
+    font-size: 9px;
   }
 }
 

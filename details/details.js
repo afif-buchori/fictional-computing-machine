@@ -7,8 +7,12 @@ btnWishlist.addEventListener("click", () => {
 });
 // AUTO SCROLL TO PACKAGE OPTIONS =============>>>>>>>>>>
 const btnSelectOpt = document.getElementById("btn-select-options");
+const btnSelectOpt2 = document.getElementById("btn-select-options2");
 const compPackage = document.getElementById("package");
 btnSelectOpt.addEventListener("click", () => {
+  compPackage.scrollIntoView({ behavior: "smooth" });
+});
+btnSelectOpt2.addEventListener("click", () => {
   compPackage.scrollIntoView({ behavior: "smooth" });
 });
 // END AUTO SCROLL TO PACKAGE OPTIONS
@@ -74,7 +78,7 @@ inputAdult.addEventListener("input", (e) => {
   handleCalc();
 });
 inputChild.addEventListener("input", () => {
-  if (isNaN(e.target.value)) inputAdult.value = 0;
+  if (isNaN(e.target.value)) inputChild.value = 0;
   handleCalc();
 });
 
@@ -108,3 +112,71 @@ btnClose.addEventListener("click", () => {
   componentModal.style.display = "none";
 });
 // END MODAL DETAILS
+
+// SCROLL OTHER DETAILS
+const comp01 = document.getElementById("desc-asd1");
+const comp02 = document.getElementById("desc-asd2");
+const comp03 = document.getElementById("desc-asd3");
+const compReview = document.getElementById("review-asd1");
+const menuSide1 = document.getElementById("menu-nav1");
+menuSide1.innerText = comp01.innerText;
+menuSide1.addEventListener("click", () => {
+  comp01.scrollIntoView({ behavior: "smooth" });
+});
+const menuSide2 = document.getElementById("menu-nav2");
+menuSide2.innerText = comp02.innerText;
+menuSide2.addEventListener("click", () => {
+  comp02.scrollIntoView({ behavior: "smooth" });
+});
+const menuSide3 = document.getElementById("menu-nav3");
+menuSide3.innerText = comp03.innerText;
+menuSide3.addEventListener("click", () => {
+  comp03.scrollIntoView({ behavior: "smooth" });
+});
+const menuSide4 = document.getElementById("menu-nav4");
+menuSide4.innerText = compReview.innerText;
+menuSide4.addEventListener("click", () => {
+  compReview.scrollIntoView({ behavior: "smooth" });
+});
+
+function isElementInViewport(el) {
+  // var rect = el.getBoundingClientRect();
+  var rect = el.getBoundingClientRect();
+  return rect.top <= window.innerHeight / 3 && rect.bottom >= 0;
+  // return (
+  //   rect.top >= 0 &&
+  //   rect.left >= 0 &&
+  //   rect.bottom <=
+  //     (window.innerHeight || document.documentElement.clientHeight) &&
+  //   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  // );
+}
+function handleScroll() {
+  const pointer = document.getElementById("pointer-menu111");
+  if (isElementInViewport(comp01)) {
+    pointer.style.marginTop = "0px";
+  }
+  if (isElementInViewport(comp02)) {
+    pointer.style.marginTop = "50px";
+  }
+  if (isElementInViewport(comp03)) {
+    pointer.style.marginTop = "100px";
+  }
+  if (isElementInViewport(compReview)) {
+    pointer.style.marginTop = "150px";
+  }
+}
+window.addEventListener("scroll", handleScroll);
+// END SCROLL
+
+// MAPPING REVIEW
+const cardReview = document.getElementById("card-review1111");
+const containerReview = document.getElementById("mapping-reviewcomp111");
+
+const totalCardReview = 5;
+
+for (let i = 0; i < totalCard; i++) {
+  let clonedCard = cardReview.cloneNode(true);
+  containerReview.appendChild(clonedCard);
+}
+// END MAPPING REVIEW
