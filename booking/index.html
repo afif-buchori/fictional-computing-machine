@@ -18,12 +18,21 @@
   </head>
   <body>
     <main class="content111">
-      <div class="flex">
-        <p>Form</p>
-        <p>Payment</p>
-        <p>Result</p>
+      <div class="step-containerhjk1270">
+        <span class="step-grouphjk1270">
+          <div class="label-hjk1270 label-hjk1270-active"></div>
+          <p>Form</p>
+        </span>
+        <span class="step-grouphjk1270">
+          <div class="label-hjk1270"></div>
+          <p>Payment</p>
+        </span>
+        <span class="step-grouphjk1270">
+          <div class="label-hjk1270"></div>
+          <p>Result</p>
+        </span>
       </div>
-      <section class="details-comp111">
+      <section class="container2side1111">
         <article class="form-booking-comp111">
           <div class="form-booking10101">
             <h1 class="title-form10101">Booking Form</h1>
@@ -91,7 +100,12 @@
           <div class="form-booking10101">
             <label for="request" class="inputs-booking10101">
               <p>Special Request :</p>
-              <textarea name="request" id="request" rows="6"></textarea>
+              <textarea
+                name="request"
+                id="request"
+                rows="6"
+                placeholder="Type your request"
+              ></textarea>
             </label>
           </div>
           <div class="form-booking10101">
@@ -116,8 +130,26 @@
               </li>
             </ul>
           </div>
-          <div>
-            <button id="submit-booking" class="btn-prime">Submit</button>
+          <div class="form-booking10101">
+            <h2 class="title-form10101">Payment Method :</h2>
+            <label for="credit-card" class="payment-method1270">
+              <i class="bi bi-credit-card"></i>
+              <input
+                type="radio"
+                name="payment"
+                id="credit-card"
+                value="credit-card"
+              />
+              <p>PAY WITH CREDIT CARD</p>
+            </label>
+            <label for="paypal" class="payment-method1270">
+              <i class="bi bi-paypal"></i>
+              <input type="radio" name="payment" id="paypal" value="paypal" />
+              <p>PAY WITH PAYPAL</p>
+            </label>
+            <p id="err-payment" class="err-paymentmethod1111">
+              *payment method not selected
+            </p>
           </div>
         </article>
 
@@ -144,6 +176,9 @@
           </div>
         </span>
       </section>
+      <div class="actionpage1270">
+        <button id="submit-booking" class="btn-prime">Submit</button>
+      </div>
     </main>
   </body>
 
