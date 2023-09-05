@@ -1167,7 +1167,7 @@ section .swiper-button-next:hover::after {
 .container2side1111 {
   display: flex;
   gap: 20px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 /* STEP */
@@ -1224,6 +1224,36 @@ section .swiper-button-next:hover::after {
 .step-grouphjk1270 p {
   font-size: 12px;
   font-weight: 600;
+}
+/*  */
+.label-done1270 {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  position: relative;
+}
+.label-done1270::after {
+  content: "";
+  display: flex;
+  width: 100px;
+  height: 4px;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.label-done1270::before {
+  content: "";
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-slate-80);
+  position: absolute;
+  top: 4px;
+  left: 4px;
 }
 
 .form-booking-comp111 {
@@ -1398,7 +1428,7 @@ section .swiper-button-next:hover::after {
   display: flex;
   width: 70%;
   justify-content: end;
-  padding-right: 41px;
+  padding-right: 35px;
 }
 .actionpage1270 button {
   width: 160px;

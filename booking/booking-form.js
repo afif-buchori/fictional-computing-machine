@@ -4,12 +4,16 @@ const errEmail = document.getElementById("err-email");
 const errPhone = document.getElementById("err-phone");
 const errCountry = document.getElementById("err-country");
 const errPayment = document.getElementById("err-payment");
+const errPickup = document.getElementById("err-pickup");
+const errDropoff = document.getElementById("err-dropoff");
 
 const inputFirstName = document.getElementById("first-name");
 const inputLastName = document.getElementById("last-name");
 const inputEmail = document.getElementById("email");
 const inputPhone = document.getElementById("phone");
 const inputCountry = document.getElementById("country");
+// const inputPickup = document.getElementById("pickup-loc");
+// const inputDropoff = document.getElementById("dropoff-loc");
 const inputRequest = document.getElementById("request");
 const paymentRadioBtn = document.getElementsByName("payment");
 
@@ -55,6 +59,22 @@ inputCountry.addEventListener("input", (e) => {
   if (e.target.value !== "") errCountry.style.display = "none";
   else errCountry.style.display = "block";
 });
+// inputPickup.addEventListener("input", (e) => {
+//   if (e.target.value !== "") errPickup.style.display = "none";
+//   else errPickup.style.display = "block";
+// });
+// inputDropoff.addEventListener("input", (e) => {
+//   if (e.target.value !== "") errDropoff.style.display = "none";
+//   else errDropoff.style.display = "block";
+// });
+
+const valCredCard = document.getElementById("credit-card");
+const valPaypal = document.getElementById("paypal");
+const handleChangePayment = () => {
+  errPayment.style.display = "none";
+};
+valCredCard.addEventListener("change", handleChangePayment);
+valPaypal.addEventListener("change", handleChangePayment);
 
 const btnSubmit = document.getElementById("submit-booking");
 btnSubmit.addEventListener("click", () => {
@@ -63,6 +83,8 @@ btnSubmit.addEventListener("click", () => {
   const isValidEmail = inputEmail.value !== "";
   const isValidPhone = inputPhone.value !== "" && !isNaN(inputPhone.value);
   const isValidCountry = inputCountry.value !== "";
+  // const isValidPickLoc = inputPickup.value !== "";
+  // const isValidDropLoc = inputDropoff.value !== "";
 
   let paymentSelected;
   for (const radioBtn of paymentRadioBtn) {
@@ -81,6 +103,8 @@ btnSubmit.addEventListener("click", () => {
   } else errEmail.style.display = "block";
   if (!isValidPhone) errPhone.style.display = "block";
   if (!isValidCountry) errCountry.style.display = "block";
+  // if (!isValidPickLoc) errPickup.style.display = "block";
+  // if (!isValidDropLoc) errDropoff.style.display = "block";
   if (!paymentSelected) errPayment.style.display = "block";
 
   if (
@@ -89,6 +113,8 @@ btnSubmit.addEventListener("click", () => {
     isValidEmail &&
     isValidPhone &&
     isValidCountry &&
+    // isValidPickLoc &&
+    // isValidDropLoc &&
     paymentSelected
   ) {
     const data = {
