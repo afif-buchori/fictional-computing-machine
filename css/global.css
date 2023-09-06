@@ -152,8 +152,8 @@ select {
   display: flex;
   align-items: center;
   gap: 16px;
-  height: 32px;
-  padding: 0 12px;
+  /* height: 32px; */
+  padding: 4px 12px;
   border-radius: 16px;
   text-decoration: none;
   color: black;
@@ -1246,7 +1246,7 @@ section .swiper-button-next:hover::after {
 }
 .label-done1270::before {
   content: "";
-  display: flex;
+  display: none;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -1254,6 +1254,15 @@ section .swiper-button-next:hover::after {
   position: absolute;
   top: 4px;
   left: 4px;
+}
+.label-done1270 .bi {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  font-size: 20px;
+  z-index: 1;
+  /* color: var(--color-accent); */
+  color: white;
 }
 
 .form-booking-comp111 {
@@ -1433,8 +1442,63 @@ section .swiper-button-next:hover::after {
 .actionpage1270 button {
   width: 160px;
 }
-
 /* END BOOKING PAGE */
+
+/* RESULT PAGE */
+.container1side1111 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+.cardresult-payment1021 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px var(--color-slate-80);
+  border-radius: 20px;
+  box-shadow: 1px 1px 8px var(--color-slate-50);
+  overflow: hidden;
+}
+.cardresult-payment1021 * {
+  font-size: 16px;
+}
+.cardresult-payment1021 h2 {
+  padding: 12px 20px;
+  font-size: 20px;
+}
+.tablerows-tr1011 {
+  display: flex;
+  gap: 12px;
+  padding: 12px 20px;
+  border-top: solid 1px var(--color-slate-80);
+}
+/* .tablerows-tr1011:nth-child(odd) {
+  background: linear-gradient(
+    to right,
+    rgba(255, 166, 0, 0),
+    rgba(255, 165, 0, 0.1)
+  );
+} */
+.tablerows-tr1011:nth-child(even) {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgba(255, 132, 0, 0.1)
+  );
+}
+.tablehead-th1011 {
+  width: 160px;
+  display: flex;
+}
+.tablehead-th1011::after {
+  content: ":";
+  margin-left: auto;
+}
+.tablerows-tr1011 *:nth-child(2) {
+  flex: 1;
+}
+/* END RESULT PAGE */
 
 @media (max-width: 768px) {
   .btn-pagination111 {
@@ -1671,6 +1735,13 @@ section .swiper-button-next:hover::after {
   .actionpage1270 button {
     flex: 1;
   }
+}
+
+.cardresult-payment1021 * {
+  font-size: 14px;
+}
+.tablehead-th1011 {
+  width: 124px;
 }
 
 .long-text {
