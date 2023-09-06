@@ -74,6 +74,9 @@ select {
   align-items: center;
   gap: 4px;
 }
+.flex-1111 {
+  flex: 1;
+}
 .flex-wrap111 {
   display: flex;
   flex-wrap: wrap;
