@@ -73,12 +73,26 @@ btnDescChild.addEventListener("click", () => {
   handleCalc();
 });
 
-inputAdult.addEventListener("input", (e) => {
-  if (isNaN(e.target.value)) inputAdult.value = 1;
+// inputAdult.addEventListener("input", (e) => {
+//   if (isNaN(e.target.value)) inputAdult.value = 1;
+//   handleCalc();
+// });
+// inputChild.addEventListener("input", (e) => {
+//   if (isNaN(e.target.value)) inputChild.value = 0;
+//   handleCalc();
+// });
+
+const btnDescInfant = document.getElementById("btn-desc-infant");
+const btnAscInfant = document.getElementById("btn-asc-infant");
+const inputInfant = document.getElementById("infant");
+btnAscInfant.addEventListener("click", () => {
+  inputInfant.value = parseInt(inputInfant.value) + 1;
   handleCalc();
 });
-inputChild.addEventListener("input", () => {
-  if (isNaN(e.target.value)) inputChild.value = 0;
+btnDescInfant.addEventListener("click", () => {
+  value = parseInt(inputInfant.value);
+  if (value < 1) return;
+  inputInfant.value = value - 1;
   handleCalc();
 });
 
@@ -88,8 +102,10 @@ elemenPrice.innerHTML = "Rp.  " + price.toLocaleString("id-ID");
 const handleCalc = () => {
   const valAdult = parseInt(inputAdult.value);
   const valChild = parseInt(inputChild.value);
+  const valInfant = parseInt(inputInfant.value);
   let totalPrice = 0;
-  totalPrice = price * valAdult + price * (valChild / 2);
+  totalPrice =
+    price * valAdult + price * (valChild / 2) + price * (valInfant / 4);
   elemenPrice.innerHTML = "Rp.  " + totalPrice.toLocaleString("id-ID");
 };
 // END HANDLE QTY GUEST

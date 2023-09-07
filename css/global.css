@@ -854,19 +854,27 @@ section .swiper-button-next:hover::after {
   border-radius: 20px;
   border: none;
   outline: none;
+  max-width: 180px;
 }
 .input-qty111 {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
   padding: 6px 12px;
   background-color: var(--color-slate-80);
   border-radius: 20px;
+  position: relative;
 }
 .input-qty111 p {
   font-style: italic;
   color: var(--color-accent);
   margin-right: auto;
+}
+.input-qty111 .info-age1111 {
+  font-size: 12px;
+  position: absolute;
+  top: -16px;
+  right: 4px;
 }
 .input-qty111 input {
   width: 24px;
@@ -882,8 +890,8 @@ section .swiper-button-next:hover::after {
   font-size: 20px;
 }
 .btn-qty111 {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   border: solid 2px black;
   display: grid;
@@ -1166,7 +1174,7 @@ section .swiper-button-next:hover::after {
 
 /* END OTHER DESCRIPTIONS */
 
-/* BOOKING PAGE */
+/* BOOKING FORM PAGE */
 .container2side1111 {
   display: flex;
   gap: 20px;
@@ -1356,13 +1364,34 @@ section .swiper-button-next:hover::after {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 16px 20px;
+  /* padding: 16px 20px; */
+  overflow: hidden;
   border: solid 1px var(--color-slate-80);
   border-radius: 20px;
   box-shadow: 1px 1px 8px var(--color-slate-80);
   position: sticky;
   top: 14px;
   left: 0;
+}
+.desc-result1111 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  overflow: hidden;
+}
+.image-service1111 {
+  width: 100%;
+  display: flex;
+  /* height: 160px; */
+  /* padding: 20px; */
+}
+.image-service1111 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-top-left-radius: 14px;
+  border-top-right-radius: 14px; */
 }
 .flexgap5678 {
   display: flex;
@@ -1639,12 +1668,18 @@ section .swiper-button-next:hover::after {
   .form-input-booking1111 {
     flex-direction: column;
   }
+  .label-form1111 #datepicker,
   .flatpickr-mobile {
-    width: 100%;
+    max-width: 100%;
     height: 40px;
   }
   .form-input-booking1111 .flex {
     flex-wrap: wrap;
+  }
+  .input-qty111 .info-age1111 {
+    position: static;
+    margin-left: auto;
+    margin-right: 4px;
   }
   .form-input-booking1111 .input-qty111 {
     width: 100%;

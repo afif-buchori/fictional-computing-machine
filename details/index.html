@@ -195,47 +195,7 @@
                 </button>
               </span>
             </div>
-            <!-- SHOW FORM -->
-            <!-- <div id="form-package" class="form-component111">
-              <div id="calendar"></div>
-              <span class="form-guest111">
-                <h2>Select Date and Options</h2>
-                <div class="input-qty111">
-                  <p>Adult:</p>
-                  <button id="btn-desc-adult" class="btn-qty111">
-                    <i class="bi bi-dash"></i>
-                  </button>
-                  <input type="numeric" name="adult" id="adult" value="1" />
-                  <button id="btn-asc-adult" class="btn-qty111">
-                    <i class="bi bi-plus"></i>
-                  </button>
-                </div>
-                <div class="input-qty111">
-                  <p>Child:</p>
-                  <button id="btn-desc-child" class="btn-qty111">
-                    <i class="bi bi-dash"></i>
-                  </button>
-                  <input type="numeric" name="child" id="child" value="0" />
-                  <button id="btn-asc-child" class="btn-qty111">
-                    <i class="bi bi-plus"></i>
-                  </button>
-                </div>
-                <div class="btnaction-container111">
-                  <div class="flex">
-                    <h5 class="total-price111">Rp. 1.709.512</h5>
-                    <p class="discount1111">Rp. 1.820.678</p>
-                  </div>
-                  <div class="flex">
-                    <button id="cancle-book" class="btn-outline-prime">
-                      Cancel
-                    </button>
-                    <button id="submit-book" class="btn-prime">Book Now</button>
-                  </div>
-                </div>
-              </span>
-            </div> -->
-            <!-- END SHOW FORM -->
-            <!-- 2 -->
+            <!-- FORM -->
             <div id="form-package" class="form-component111">
               <span class="form-input-group111">
                 <h2 class="h2-popular111 mb-5">Select Date & Options</h2>
@@ -263,6 +223,7 @@
                           name="adult"
                           id="adult"
                           value="1"
+                          readonly
                         />
                         <button id="btn-asc-adult" class="btn-qty111">
                           <i class="bi bi-plus"></i>
@@ -270,6 +231,7 @@
                       </div>
                       <div class="input-qty111">
                         <p>Child:</p>
+                        <p class="info-age1111">*age 1-6</p>
                         <button id="btn-desc-child" class="btn-qty111">
                           <i class="bi bi-dash"></i>
                         </button>
@@ -279,8 +241,27 @@
                           name="child"
                           id="child"
                           value="0"
+                          readonly
                         />
                         <button id="btn-asc-child" class="btn-qty111">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                      <div class="input-qty111">
+                        <p>Infant:</p>
+                        <p class="info-age1111">*age under 1</p>
+                        <button id="btn-desc-infant" class="btn-qty111">
+                          <i class="bi bi-dash"></i>
+                        </button>
+                        <input
+                          type="text"
+                          inputmode="numeric"
+                          name="infant"
+                          id="infant"
+                          value="0"
+                          readonly
+                        />
+                        <button id="btn-asc-infant" class="btn-qty111">
                           <i class="bi bi-plus"></i>
                         </button>
                       </div>
@@ -306,7 +287,7 @@
                 </div>
               </span>
             </div>
-            <!-- 2 -->
+            <!-- END FORM -->
 
             <!-- MODAL DETAILS -->
             <div class="comp-bg111">
@@ -624,29 +605,4 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-  <script>
-    const isUsed = false;
-    if (isUsed) {
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          aspectRatio: 2.2,
-          validRange: {
-            start: new Date().toISOString().split("T")[0], // Batas tanggal mulai hari ini
-            end: "2100-12-31", // Batas tanggal akhir di masa depan
-          },
-          selectable: true, // Aktifkan seleksi tanggal
-          // Opsi lainnya...
-          select: function (info) {
-            // Fungsi yang dijalankan saat tanggal dipilih
-            var startDate = info.startStr;
-            var endDate = info.endStr;
-            console.log(info.startStr);
-            // console.log("Selected date range:", startDate, "to", endDate);
-          },
-        });
-        calendar.render();
-      });
-    }
-  </script>
 </html>
