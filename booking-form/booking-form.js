@@ -127,6 +127,7 @@ btnSubmit.addEventListener("click", () => {
       special_request: inputRequest.value,
     };
     console.log(data);
+    window.location.href = "/payment-result";
   } else {
     window.scrollTo({
       top: 0,

@@ -1738,13 +1738,13 @@ section .swiper-button-next:hover::after {
   .actionpage1270 button {
     flex: 1;
   }
-}
 
-.cardresult-payment1021 * {
-  font-size: 14px;
-}
-.tablehead-th1011 {
-  width: 124px;
+  .cardresult-payment1021 * {
+    font-size: 14px;
+  }
+  .tablehead-th1011 {
+    width: 124px;
+  }
 }
 
 .long-text {
